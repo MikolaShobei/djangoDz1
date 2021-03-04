@@ -22,8 +22,7 @@ def user(request, **kwargs):
 
 
 def home(request):
-    hello = "Привіт!! " \
-            "Введи в адресний рядок: ім`я/вік/стать"
 
 
-    return render(request, 'users/home.html', {"hello": hello})
+
+    return render(request, 'users/home.html')
