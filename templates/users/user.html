@@ -5,6 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-    <div>{{ users.name }} -- {{ users.age }} -- {{ users.gender }}</div>
+    {% for user in users %}
+        <h2>{{ user.name }} -- {{ user.age }} -- {{ user.gender }}</h2>
+    {% endfor %}
+
 </body>
 </html>
