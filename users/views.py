@@ -8,7 +8,7 @@ from .models import User
 db_path = os.path.join("users", 'db.json')
 
 
-def users(request, **kwargs):
+def user(request, **kwargs):
 
     with open(db_path, "w") as file:
         json.dump(kwargs, file)
@@ -17,13 +17,13 @@ def users(request, **kwargs):
 
         users_list = json.load(file)
 
-    return render(request, 'users/home.html', {"users": users_list})
+    return render(request, 'users/user.html', {"users": users_list})
 
 
 
 def home(request):
-    file = open(db_path)
-    users_list = [item for item in json.load(file)]
-    file.close()
+    hello = "Привіт!! " \
+            "Введи в адресний рядок: ім`я/вік/стать"
 
-    return render(request, 'users/home.html', {"users": users_list})
+
+    return render(request, 'users/home.html', {"hello": hello})

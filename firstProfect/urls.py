@@ -18,11 +18,11 @@ from django.urls import path
 
 
 from calculator.views import main
-from users.views import home, users
+from users.views import home, user
 
 urlpatterns = [
     path('', home),
-    path('<str:name>/<int:age>/<str:gender>', users),
+    path('<str:name>/<int:age>/<str:gender>', user),
     path('<int:val1>/<str:action>/<int:val2>', main)
 ]
 
