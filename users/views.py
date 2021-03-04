@@ -22,8 +22,7 @@ def users(request, **kwargs):
 
 
 def home(request):
-    file = open(db_path, 'r')
-    # r = json.load(file)
+    file = open(db_path)
     users_list = [item for item in json.load(file)]
     file.close()
 
