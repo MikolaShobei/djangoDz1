@@ -29,4 +29,4 @@ def home(request):
     users_list = [item for item in json.load(file)]
     file.close()
 
-    return render(request, 'users/home.html', {"users": users_list, "u_l": 5})
+    return render(request, 'users/home.html', {"users": users_list})
