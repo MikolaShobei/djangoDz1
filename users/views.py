@@ -11,8 +11,6 @@ db_path = os.path.join("users", 'db.json')
 def users(request, **kwargs):
 
     with open(db_path, "w") as file:
-        # file.write(users_list)
-        # user = User(kwargs)
         json.dump(kwargs, file)
 
     with open(db_path, 'r') as file:
