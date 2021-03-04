@@ -34,8 +34,7 @@ def user(request, **kwargs):
         with open(db_path, "w") as file:
             file.write(json_users_list)
         print(err)
-    finally:
-        pass
+
 
 
     return render(request, 'users/user.html', {"users": users_list1})
