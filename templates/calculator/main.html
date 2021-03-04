@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    {% if not wrong %}
+        <p>{{ val1 }} {{ action }} {{ val2 }} = {{ ans }}</p>
+
+    {% elif wrong %}
+        <h2>{{ wrong }}</h2>
+    {% endif %}
+
+
+</body>
+</html>
